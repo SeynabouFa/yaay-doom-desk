@@ -6,15 +6,13 @@ console.log(app.webFrame)
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
     transparent: true,
-    // fullscreen: true,
+    fullscreen: true,
     webPreferences: {
       nodeIntegration: true,
     },
   })
-  mainWindow.loadFile('index.html')
+  mainWindow.loadURL('https://yaay-doom.vercel.app/')
   mainWindow.on('closed', () => {
     mainWindow = null
   })
